@@ -1,0 +1,11 @@
+header > h1 {
+    display: center;
+    justify-content: center;
+    background-color: brown;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
