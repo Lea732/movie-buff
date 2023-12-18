@@ -1,0 +1,10 @@
+.film_serie_card {
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+}
+
+.film_serie_card > img {
+    height: 18rem;
+    
+}
