@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+.presentation_film_serie {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
