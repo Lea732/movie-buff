@@ -22,6 +22,13 @@ function App() {
     const updatedFavoriteFilms = isFavorite
       ? [...favoriteFilms, id]
       : favoriteFilms.filter((filmId) => filmId !== id);
+    
+  return (
+    <>  
+      <Header/>
+<main className='main'>
+      <HomePresentation/>
+
 
     setFavoriteFilms(updatedFavoriteFilms);
   };
@@ -45,6 +52,8 @@ function App() {
           <FilmSerieCard key={index} infos={film} onFavoriteChange={handleFavoriteChange} />
         ))}
       </div>
+      </main>
+      <Footer/>
     </>
   );
 }
