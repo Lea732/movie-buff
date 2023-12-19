@@ -1,11 +1,17 @@
 header > h1 {
     display: center;
     justify-content: center;
-    background-color: brown;
+    
 }
 
 header { 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
+    background: linear-gradient(#c91630,rgb(125, 70, 70));
+}
+
+ .logo {
+    height: 8rem;
 }
