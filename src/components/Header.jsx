@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import "../styles/Header.css";
 import SelectorFilmSerie from "./SelectorFilmSerie";
+import PropTypes from "prop-types";
 
 function Header({favorite, setFavorite}) {
   return (
@@ -14,3 +15,7 @@ function Header({favorite, setFavorite}) {
 
 export default Header;
 
+Header.propTypes = {
+  favorite: PropTypes.bool.isRequired,
+  setFavorite: PropTypes.func.isRequired,
+};
