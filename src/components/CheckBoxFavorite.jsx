@@ -1,29 +1,31 @@
-import { useState } from "react";
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types';
 
-function CheckBoxFavorite({infos}) {
-
-    const [favorite, setFavorite] = useState(infos.favorite);
-
-    const handleCheckboxChange = () => {
-        setFavorite((prevFavorite) => !prevFavorite);
-      };
+function Card({ infos, setFilters }) {
+  const handleCheckboxChange = () => {
+    setFilters({ favorite: !infos.favorite ? 'True' : 'All' });
+  };
 
   return (
-    <div>
+    <div className="film_serie_card">
+      <h2>{infos.name}</h2>
+      <img className="film_serie_image" src={infos.img} alt={infos.name} />
+      <p>{infos.desc}</p>
+      <div>
         <label htmlFor="favoriteCheckbox">Add to Favorites</label>
         <input
           id="favoriteCheckbox"
           type="checkbox"
-          checked={favorite}
+          checked={infos.favorite}
           onChange={handleCheckboxChange}
         />
       </div>
-  )
+    </div>
+  );
 }
 
-export default CheckBoxFavorite
+export default Card;
 
-CheckBoxFavorite.propTypes = {
-    infos: PropTypes.object,
-}
+Card.propTypes = {
+  infos: PropTypes.object,
+  setFilters: PropTypes.func,
+};

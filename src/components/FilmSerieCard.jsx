@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import "../styles/FilmSerieCard.css"
 import CheckBoxFavorite from "./CheckBoxFavorite";
 
-function Card({infos}) {
+function FilmSerieCard({infos}) {
 
   return (
     <div className="film_serie_card">
@@ -15,8 +15,8 @@ function Card({infos}) {
   )
 }
 
-export default Card
+export default FilmSerieCard
 
-Card.propTypes = {
+FilmSerieCard.propTypes = {
     infos: PropTypes.object,
 }
