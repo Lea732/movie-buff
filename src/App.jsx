@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import HomePresentation from "./components/HomePresentation";
 import FilmSerieCard from "./components/FilmSerieCard";
 import filmAndSerie from "./data/filmAndSeries";
@@ -22,15 +23,7 @@ function App() {
     const updatedFavoriteFilms = isFavorite
       ? [...favoriteFilms, id]
       : favoriteFilms.filter((filmId) => filmId !== id);
-    
-  return (
-    <>  
-      <Header/>
-<main className='main'>
-      <HomePresentation/>
-
-
-    setFavoriteFilms(updatedFavoriteFilms);
+      setFavoriteFilms(updatedFavoriteFilms);
   };
 
   const getFilteredFilms = () => {
@@ -42,10 +35,11 @@ function App() {
       return filmAndSerie.filter((film) => film.type === filters.favorite);
     }
   };
-
+    
   return (
     <>
       <Header favorite={filters.favorite} setFavorite={handleSetFilters} />
+      <main className='main'>
       <HomePresentation />
       <div className="presentation_film_serie">
         {getFilteredFilms().map((film, index) => (

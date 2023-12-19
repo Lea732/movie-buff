@@ -8,6 +8,7 @@
 }
 
 .infos {
+    margin-top: 1rem;
     height: 31rem;
     display: flex;
     flex-direction: column;
@@ -32,6 +33,24 @@
     2px 7px 7px rgba(156, 123, 74, 0.5);
     
 }
+
+@keyframes imageAnimation {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .film_serie_card > img:hover {
+    animation: imageAnimation 2s infinite;
+  }
 
 .film_serie_card > img {
     height: 20rem;

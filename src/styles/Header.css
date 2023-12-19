@@ -20,10 +20,6 @@ header {
     border-bottom: black 1px solid;
 }
 
- .logo {
-    height: 8rem;
-}
-
 select {
     border-radius: 5px;
     border-bottom: rgb(204, 16, 32) 1px solid;

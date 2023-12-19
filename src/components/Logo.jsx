@@ -1,3 +1,5 @@
+import "../styles/Logo.css";
+
 import Camera from '../assets/camera.png'
 
 function Logo() {
