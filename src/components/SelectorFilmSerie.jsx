@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function SelectorFilmSerie({ favorite, setFavorite }) {
   const handleChange = (event) => {
     setFavorite({ favorite: event.target.value });
@@ -16,3 +18,9 @@ function SelectorFilmSerie({ favorite, setFavorite }) {
 }
 
 export default SelectorFilmSerie;
+
+SelectorFilmSerie.propTypes = {
+    favorite: PropTypes.bool.isRequired,
+    setFavorite: PropTypes.func.isRequired,
+};
+ 
