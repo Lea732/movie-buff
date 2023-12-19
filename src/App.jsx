@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-
+import Footer from './components/Footer'
 import Header from './components/Header'
 import HomePresentation from './components/HomePresentation'
 import Card from './components/FilmSerieCard';
@@ -22,7 +22,7 @@ function App() {
         {filmAndSerie.map((film, index) => (
         <Card key={index} infos={film}/> 
         ))}
-        
+        <Footer/>
       </div>
     </>
   )
