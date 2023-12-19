@@ -7,9 +7,10 @@ function Header({favorite, setFavorite}) {
     <header>
       <Logo />
       <h1>Movie-buff</h1> 
-      <SelectorFilmSerie favorite={favorite} setFavorite={setFavorite} />
+      <SelectorFilmSerie favorite={favorite.favorite} setFavorite={setFavorite} />
     </header>
   );
 }
 
 export default Header;
+

@@ -1,31 +1,35 @@
-import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-function Card({ infos, setFilters }) {
+function CheckBoxFavorite({ id, onFavoriteChange }) {
+  const [favorite, setFavorite] = useState(false);
+
+  useEffect(() => {
+    onFavoriteChange(id, favorite);
+  }, [id, favorite, onFavoriteChange]);
+
   const handleCheckboxChange = () => {
-    setFilters({ favorite: !infos.favorite ? 'True' : 'All' });
+    setFavorite((prevFavorite) => !prevFavorite);
   };
 
   return (
-    <div className="film_serie_card">
-      <h2>{infos.name}</h2>
-      <img className="film_serie_image" src={infos.img} alt={infos.name} />
-      <p>{infos.desc}</p>
-      <div>
-        <label htmlFor="favoriteCheckbox">Add to Favorites</label>
-        <input
-          id="favoriteCheckbox"
-          type="checkbox"
-          checked={infos.favorite}
-          onChange={handleCheckboxChange}
-        />
-      </div>
+    <div>
+      <label htmlFor={`favoriteCheckbox-${id}`}>Add to Favorites</label>
+      <input
+        id={`favoriteCheckbox-${id}`}
+        type="checkbox"
+        checked={favorite}
+        onChange={handleCheckboxChange}
+      />
     </div>
   );
 }
 
-export default Card;
-
-Card.propTypes = {
-  infos: PropTypes.object,
-  setFilters: PropTypes.func,
+CheckBoxFavorite.propTypes = {
+  id: PropTypes.number.isRequired,
+  onFavoriteChange: PropTypes.func.isRequired,
 };
+
+export default CheckBoxFavorite;
+
+
