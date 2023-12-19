@@ -24,15 +24,15 @@
 
 .film_serie_card > h2 {
     font-family: 'Barlow Semi Condensed', sans-serif, bolder;
+    color: rgb(255, 255, 255);
     text-shadow:
-    -1px -1px 0 rgb(151, 140, 140),
-    1px -1px 0 rgb(151, 140, 140),
-    -1px 1px 0 rgb(151, 140, 140),
-    2px 7px 7px rgba(0, 0, 0, 0.5);
+    -1px -1px 0 rgb(156, 123, 74),
+    1px -1px 0 rgb(156, 123, 74),
+    -1px 1px 0 rgb(156, 123, 74),
+    2px 7px 7px rgba(156, 123, 74, 0.5);
     
 }
 
 .film_serie_card > img {
     height: 20rem;
-    
 }
