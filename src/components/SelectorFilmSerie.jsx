@@ -22,5 +22,5 @@ export default SelectorFilmSerie;
 SelectorFilmSerie.propTypes = {
     favorite: PropTypes.bool.isRequired,
     setFavorite: PropTypes.func.isRequired,
-};
+  };
  
