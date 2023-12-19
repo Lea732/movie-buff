@@ -15,15 +15,17 @@ function App() {
   return (
     <>  
       <Header/>
-   
+<main className='main'>
       <HomePresentation/>
 
       <div className="presentation_film_serie">
         {filmAndSerie.map((film, index) => (
         <Card key={index} infos={film}/> 
         ))}
-        <Footer/>
+        
       </div>
+      </main>
+      <Footer/>
     </>
   )
 }
