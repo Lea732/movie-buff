@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
+import "../styles/CheckBoxFavorite.css";
+
 function CheckBoxFavorite({ id, onFavoriteChange }) {
   const [favorite, setFavorite] = useState(false);
 
@@ -13,7 +15,7 @@ function CheckBoxFavorite({ id, onFavoriteChange }) {
   };
 
   return (
-    <div>
+    <div className="checkbox">
       <label htmlFor={`favoriteCheckbox-${id}`}>Add to Favorites</label>
       <input
         id={`favoriteCheckbox-${id}`}

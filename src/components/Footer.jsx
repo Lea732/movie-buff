@@ -1,15 +1,10 @@
-
+import "../styles/Footer.css"
 
 function Footer() {
     return (
-<div>
-<p>Moovie-Buff</p>
-
-    <div>
-      <p>Mon contenu protégé par une marque déposée™</p>
-    </div>
- 
-</div>
+  <div className="footer">
+      <p>Movie-Buff™</p>  
+  </div>
  );
 }
 

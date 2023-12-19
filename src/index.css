@@ -2,13 +2,11 @@
 
 * {
   box-sizing: border-box;
-  
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: 'san serif'ro;
 }
 
 h1 {
@@ -17,11 +15,7 @@ h1 {
 }
 
 :root {
-  font-family: 'roboto'sans-serif;
+  font-family: 'roboto', sans-serif;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
+

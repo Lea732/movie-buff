@@ -1,11 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Roboto&display=swap');
+
 header > h1 {
-    display: center;
-    justify-content: center;
-    background-color: brown;
+    color:rgb(224, 224, 224);
+    text-shadow:
+    -1px -1px 0 rgb(204, 16, 32),
+    1px -1px 0 rgb(204, 16, 32),
+    -1px 1px 0 rgb(204, 16, 32),
+    2px 7px 7px rgba(160, 84, 90, 0.5);
+    font-size: 3rem;
+    font-family: 'Barlow Semi Condensed', sans-serif, bolder;
 }
 
 header { 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
+    background: linear-gradient(#c91630,rgb(125, 70, 70));
+    border-bottom: black 1px solid;
 }
+
+select {
+    border-radius: 5px;
+    border-bottom: rgb(204, 16, 32) 1px solid;
+    color: rgb(118, 8, 17);
+    width: 5rem;
+    text-align: center;
+}
+

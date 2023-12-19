@@ -1,10 +1,58 @@
 .film_serie_card {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20rem;
+    width: 30rem;
+    text-align: center;
+    margin: 1rem 0.5rem 1rem 0.5rem;
 }
 
-.film_serie_card > img {
-    height: 18rem;
+.infos {
+    margin-top: 1rem;
+    height: 31rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.film_serie_card > div > p {
+    color:rgb(224, 224, 224);
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+}
+
+.film_serie_card > h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif, bolder;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 rgb(156, 123, 74),
+    1px -1px 0 rgb(156, 123, 74),
+    -1px 1px 0 rgb(156, 123, 74),
+    2px 7px 7px rgba(156, 123, 74, 0.5);
     
+}
+
+@keyframes imageAnimation {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .film_serie_card > img:hover {
+    animation: imageAnimation 2s infinite;
+  }
+
+.film_serie_card > img {
+    height: 20rem;
 }

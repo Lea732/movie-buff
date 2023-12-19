@@ -1,0 +1,18 @@
+label {
+    color: rgb(156, 123, 74);
+    margin-right: 0.5rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    margin: 0;
+}
+
+.details {
+    color: rgb(156, 123, 74);
+    text-decoration: underline;
+}
