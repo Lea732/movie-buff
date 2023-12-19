@@ -1,33 +1,62 @@
-import { useEffect } from 'react';
-import Footer from './components/Footer'
-import Header from './components/Header'
-import HomePresentation from './components/HomePresentation'
-import Card from './components/FilmSerieCard';
 
-import './App.css'
-import filmAndSerie from './data/filmAndSeries';
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import HomePresentation from "./components/HomePresentation";
+import FilmSerieCard from "./components/FilmSerieCard";
+import filmAndSerie from "./data/filmAndSeries";
+import "./App.css";
 
 function App() {
-  useEffect(() => {
-    alert("Hello movies and series lover ! :)");
-  }, []);
+  const [filters, setFilters] = useState({ favorite: "All" });
+  const [favoriteFilms, setFavoriteFilms] = useState([]);
 
+   useEffect(() => {
+   alert("Hello movies and series lover! :)");
+   }, []);
+
+  const handleSetFilters = (newFilters) => {
+    setFilters(newFilters);
+  };
+
+  const handleFavoriteChange = (id, isFavorite) => {
+    const updatedFavoriteFilms = isFavorite
+      ? [...favoriteFilms, id]
+      : favoriteFilms.filter((filmId) => filmId !== id);
+    
   return (
     <>  
       <Header/>
 <main className='main'>
       <HomePresentation/>
 
+
+    setFavoriteFilms(updatedFavoriteFilms);
+  };
+
+  const getFilteredFilms = () => {
+    if (filters.favorite === "All") {
+      return filmAndSerie;
+    } else if (filters.favorite === "True") {
+      return filmAndSerie.filter((film) => favoriteFilms.includes(film.id));
+    } else {
+      return filmAndSerie.filter((film) => film.type === filters.favorite);
+    }
+  };
+
+  return (
+    <>
+      <Header favorite={filters.favorite} setFavorite={handleSetFilters} />
+      <HomePresentation />
       <div className="presentation_film_serie">
-        {filmAndSerie.map((film, index) => (
-        <Card key={index} infos={film}/> 
+        {getFilteredFilms().map((film, index) => (
+          <FilmSerieCard key={index} infos={film} onFavoriteChange={handleFavoriteChange} />
         ))}
-        
       </div>
       </main>
       <Footer/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
