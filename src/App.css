@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Roboto&display=swap');
 
 .presentation_film_serie {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+
 
  

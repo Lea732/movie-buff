@@ -25,7 +25,8 @@ function App() {
         
       </div>
       </main>
-      <Footer/>
+      <div className='bottom'>
+      <Footer/></div>
     </>
   )
 }

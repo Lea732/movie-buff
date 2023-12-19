@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Roboto&display=swap');
+
 header > h1 {
-    display: center;
-    justify-content: center;
-    
+    color:rgb(224, 224, 224);
+    font-size: 3rem;
+    font-family: 'Barlow Semi Condensed', sans-serif, bolder;
 }
 
 header { 
@@ -10,6 +12,9 @@ header {
     align-items: center;
     padding: 2rem;
     background: linear-gradient(#c91630,rgb(125, 70, 70));
+    border-bottom: black 1px solid;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
  .logo {

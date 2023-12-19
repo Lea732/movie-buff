@@ -2,10 +2,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25rem;
+    width: 30rem;
+    text-align: center;
+    margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.infos {
+    height: 31rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.film_serie_card > div > p {
+    color:rgb(224, 224, 224);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+}
+
+.film_serie_card > h2 {
+    font-family: 'Barlow Semi Condensed', sans-serif, bolder;
+    text-shadow:
+    -1px -1px 0 rgb(151, 140, 140),
+    1px -1px 0 rgb(151, 140, 140),
+    -1px 1px 0 rgb(151, 140, 140),
+    2px 7px 7px rgba(0, 0, 0, 0.5);
+    
 }
 
 .film_serie_card > img {
-    height: 18rem;
+    height: 20rem;
     
 }
