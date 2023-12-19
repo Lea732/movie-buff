@@ -5,6 +5,7 @@
     width: 30rem;
     text-align: center;
     margin: 1rem 0.5rem 1rem 0.5rem;
+    border: rgb(156, 123, 7) 1px solid;
 }
 
 .infos {
